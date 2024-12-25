@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00d1b2;
+}
+
+.banner {
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1s ease-out;
+    border-bottom: 5px solid #00d1b2;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner button {
+    background-color: #00d1b2;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.banner button:hover {
+    background-color: #00a18e;
+    transform: translateY(-5px);
+}
+
+.categories, .features {
+    padding: 50px 20px;
+}
+
+.categories h2, .features h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card, .feature {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.card:hover, .feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Фиксированная высота для картинок */
+    object-fit: cover; /* Масштабирование изображений */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Плавный эффект при наведении */
+}
+
+.card:hover img {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+footer {
+    background-color: #1e1e1e;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer .social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #00d1b2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Общие стили для всех картинок */
+img {
+    width: 100%;
+    height: 200px; /* Устанавливаем фиксированную высоту для всех изображений */
+    object-fit: cover; /* Это гарантирует, что изображение будет масштабироваться правильно */
+    border-radius: 10px;
+}
+/* Стили для изображений в галерее */
+.gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gallery .card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gallery .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .card img {
+    width: 100%;
+    height: 200px; /* Устанавливаем фиксированную высоту */
+    object-fit: cover; /* Это гарантирует правильное масштабирование */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery .card:hover img {
+    transform: scale(1.05);
+}
+
+.gallery .card h3 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+.gallery .card p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.gallery .card button {
+    background-color: #00d1b2;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery .card button:hover {
+    background-color: #00a18e;
+}
+/* Стили для заголовка "Галерея" */
+.gallery h2 {
+    font-size: 3rem; /* Увеличиваем размер текста */
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 40px; /* Отступ снизу для отступа между заголовком и контентом */
+    color: #ffffff; /* Белый цвет для текста */
+    font-weight: bold; /* Жирное начертание */
+}
+/* Стили для кнопок в разделе "Популярные категории" */
+.categories .card button {
+    background-color: #00d1b2; /* Цвет фона кнопки */
+    color: #fff; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 1rem; /* Размер текста */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Указатель мыши в виде руки */
+    border-radius: 5px; /* Округлые углы */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы для фона и трансформации */
+}
+
+.categories .card button:hover {
+    background-color: #00a18e; /* Цвет фона при наведении */
+    transform: translateY(-5px); /* Поднимаем кнопку вверх при наведении */
+}
